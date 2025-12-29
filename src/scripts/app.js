@@ -47,7 +47,7 @@ $(function () {
 
   const states = [
     {
-      image: '/src/assets/images/spirit-ward-console.png',
+      image: '/images/spirit-ward-console.png',
       description: 'A 3D third person shooter, base defense, mystical action/strategy game where you play as an exorcist defending the village from waves of malevolent spirits.',
       roles: [
         'Physics System (Game Engine)',
@@ -58,7 +58,7 @@ $(function () {
       linkB: 'https://youtu.be/j0O26mtvuSg?si=3FLmM8-1SzUlELth'
     },
     {
-      image: '/src/assets/images/oceania-cove-console.png',
+      image: '/images/oceania-cove-console.png',
       description: 'A 2D underwater farming simulation game where you play as a farmer who got cursed into a mermaid and the only way back is to restore the village.',
       roles: [
         'Physics System (Game Engine)',
@@ -69,7 +69,7 @@ $(function () {
       linkB: 'https://youtu.be/iLDsiJ5qqEc'
     },
     {
-      image: '/src/assets/images/ufo-console.png',
+      image: '/images/ufo-console.png',
       description: 'A 2D pixelated, space-themed multiplayer arcade style game where you solve puzzles, race through obstacles, and shoot alien mobs!',
       roles: [
         'Physics System (Game Engine)',
