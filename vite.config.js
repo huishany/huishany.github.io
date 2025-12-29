@@ -3,9 +3,9 @@ import pugPlugin from 'vite-plugin-pug'
 
 export default defineConfig({
   plugins: [pugPlugin()],
-  base: process.env.VITE_BASE_PATH || "/huishany.github.io",
+  base: '/',
   build: {
-    outDir: '../dist',
+    outDir: 'dist',
     emptyOutDir: true
   }
 })

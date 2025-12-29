@@ -1,0 +1,8 @@
+.git
+npm-debug.log
+.publish
+static
+dist
+node_modules
+package-lock.json
+.DS_Store
