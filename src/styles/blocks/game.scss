@@ -1,0 +1,177 @@
+.games-section {
+  min-height: 100vh;
+  padding: 100px 0;
+  position: relative;
+  background: white;
+
+  @include media-breakpoint-down(lg) {
+    padding: 80px 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    min-height: unset;
+    padding: 60px 0;
+  }
+
+  .game-console {
+    position: relative;
+    width: 100%;
+
+    .console-screen {
+      position: absolute;
+      padding: 3%;
+      left: 26%;
+      top: 58%;
+      width: 48%;
+      height: 34%;
+      margin: 0;
+
+      overflow: hidden;
+      pointer-events: none;
+
+      font-family: 'NintendoDSBios', sans-serif;
+
+      @include media-breakpoint-down(md) {
+        padding: 2% 4%;
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding: 2% 5%;
+      }
+
+      .screen-content {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.3s ease;
+        font-size: clamp(8px, 2.4vw, 18px);
+        line-height: 1;
+
+        @include media-breakpoint-down(sm) {
+          line-height: 0.8;
+        }
+      }
+    }
+
+    .btn-dpad {
+      position: absolute;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .btn-dpad.left {
+      left: 5.5%;
+      top: 68.1%;
+      width: 4.5%;
+      height: 4.4%;
+    }
+
+    .btn-dpad.right {
+      left: 14.8%;
+      top: 68.1%;
+      width: 4.5%;
+      height: 4.4%;
+    }
+
+    .btn-action {
+      position: absolute;
+      display: block;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .a-btn {
+      right: 4.2%;
+      bottom: 29%;
+      width: 5.3%;
+      height: 5.3%;
+    }
+
+    .b-btn {
+      right: 9.7%;
+      bottom: 23.8%;
+      width: 5.3%;
+      height: 5.3%;
+    }
+
+    .btn-dpad:hover,
+    .btn-action:hover {
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.868);
+    }
+  }
+
+  .game-console.is-active .screen-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .game-console.is-switching .screen-content {
+    opacity: 0;
+  }
+
+  .indicator-left,
+  .indicator-right {
+    position: absolute;
+    bottom: 27%;
+    left: -165px;
+    width: 20%;
+    
+    img {
+      animation: bounce 2s infinite;
+    }
+
+    @include media-breakpoint-down(xl) {
+      left: -125px;
+      bottom: 28%;
+      width: 15%;
+    }
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  .indicator-right {
+    bottom: 27%;
+    left: unset;
+    right: -175px;
+
+    @include media-breakpoint-down(xl) {
+      right: -125px;
+      bottom: 28%;
+    }
+  }
+}
+
+.scrolling-ribbon {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+}
+
+.ribbon-content {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+
+  span {
+    font-size: clamp(30px, 6vw, 60px);
+    font-family: 'AemstelLineOutside', sans-serif;
+    padding-right: 2rem;
+    flex-shrink: 0;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

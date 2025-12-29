@@ -1,0 +1,95 @@
+.web-section {
+  min-height: 100vh;
+  padding: 100px 0 600px;
+  background: #DBE7F3;
+
+  @include media-breakpoint-down(xl) {
+    padding: 100px 0 450px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 80px 0 10px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 60px 0 10px;
+  }
+
+  .scrolling-ribbon {
+    z-index: 1;
+  }
+
+  .project-card {
+    background: white;
+    border-radius: 15px;
+    //padding: 30px;
+    box-shadow: 15px 15px 0px rgb(0, 0, 0);
+    transition: transform 0.3s;
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+    margin-bottom: -30rem;
+    pointer-events: none;
+
+    .content,
+    .view-btn {
+      pointer-events: auto;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: top;
+      aspect-ratio: 6/3;
+    }
+
+    @include media-breakpoint-up(lg) {
+      &:nth-child(1) {
+        transform: translateX(-130px);
+      }
+  
+      &:nth-child(2) {
+        z-index: 3;
+        transform: translateX(130px);
+      }
+  
+      &:nth-child(3) {
+        z-index: 4;
+        transform: translateX(-20px);
+      }
+  
+      &:nth-child(4) {
+        z-index: 5;
+        transform: translateX(60px);
+      }
+    }
+    
+    @include media-breakpoint-down(xl) {
+      margin-bottom: -25rem;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 4rem;
+      width: 80%;
+      margin-inline: auto;
+    }
+    
+    .content {
+      padding: 30px;
+    }
+
+    .view-btn {
+      background: white;
+      border: 2px solid #000;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        background: #000;
+        color: #fff;
+      }
+    }
+  }
+}

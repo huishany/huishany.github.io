@@ -1,0 +1,103 @@
+.contact-section {
+  min-height: 80vh;
+  padding: 100px 0 0;
+  text-align: center;
+  background: #DBE7F3;
+  background: linear-gradient(180deg, rgba(219, 231, 243, 1) 0%, rgba(240, 248, 255, 1) 12%, rgba(255, 255, 255, 1) 20%, rgba(243, 249, 255, 1) 40%, rgba(187, 206, 226, 1) 85%);
+  position: relative;
+  overflow: hidden;
+
+  @include media-breakpoint-down(md) {
+    padding: 50px 0 0;
+  }
+  
+  .cloud-link {
+    position: relative;
+    display: inline-flex;
+    width: 129px;
+    height: 77px;
+    align-items: center;
+    justify-content: center;
+  
+    svg {
+      pointer-events: none;
+  
+      path {
+        pointer-events: auto;
+        cursor: pointer;
+  
+        &:hover {
+          fill: #9bb8d9;
+        }
+      }
+    }
+  
+    i {
+      position: absolute;
+      z-index: 2;
+      font-size: 2rem;
+      color: #fff;
+      pointer-events: none;
+      bottom: 15px;
+    }
+  }
+
+  .footer-bottom {
+    position: relative;
+    height: 320px;
+
+    .character {
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      transition: transform 0.4s ease;
+      cursor: pointer;
+
+      img {
+        width: unset;
+      }
+    }
+
+    .tomato {
+      left: 22%;
+      bottom: 10%;
+      width: 20%;
+      transform: rotate(18deg);
+
+      &:hover {
+        transform: rotate(18deg) translate(0%, -15%);
+      }
+    }
+
+    .sushi {
+      width: 20%;
+      right: 19%;
+      bottom: 10%;
+
+      &:hover {
+        transform: translate(-10%, -15%);
+      }
+    }
+
+    .cloud-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .copyright {
+      position: absolute;
+      left: 50%;
+      bottom: 6%;
+      transform: translateX(-50%);
+      z-index: 4;
+      font-size: 0.85rem;
+      color: #000;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+  }
+}

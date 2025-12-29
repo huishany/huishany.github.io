@@ -1,0 +1,33 @@
+{
+  "name": "huishany.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huishany/huishany.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huishany/huishany.github.io/issues"
+  },
+  "homepage": "https://github.com/huishany/huishany.github.io#readme",
+  "description": "",
+  "devDependencies": {
+    "pug": "^3.0.3",
+    "sass": "^1.97.1",
+    "vite": "^7.3.0",
+    "vite-plugin-pug": "^0.4.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "gsap": "^3.14.2"
+  }
+}

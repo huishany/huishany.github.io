@@ -1,0 +1,19 @@
+@import '/node_modules/bootstrap/scss/functions';
+@import '/node_modules/bootstrap/scss/variables';
+@import '/node_modules/bootstrap/scss/mixins';
+// @import 'bootstrap/dist/css/bootstrap.min.css';
+
+@import '../assets/fontawesome/css/fontawesome.min.css';
+@import '../assets/fontawesome/css/brands.min.css';
+@import '../assets/fontawesome/css/regular.min.css';
+@import '../assets/fontawesome/css/solid.min.css';
+@import '../assets/fontawesome/css/sharp-regular.min.css';
+
+@import './cores/common.scss';
+@import './cores/fonts.scss';
+
+@import './blocks/header.scss';
+@import './blocks/hero.scss';
+@import './blocks/game.scss';
+@import './blocks/web.scss';
+@import './blocks/contact.scss';

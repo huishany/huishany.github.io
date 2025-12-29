@@ -1,0 +1,85 @@
+.hero {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  background: linear-gradient(117deg, #FFC0C0, #DFF9FF, #FFF3DF, #E7DFFF, #D0FFC2);
+  background-size: 1000% 1000%;
+
+  animation: gradientAnimate 38s ease infinite;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+
+  // @include media-breakpoint-down(sm) {
+  //   min-height: unset;
+  //   padding-bottom: 400px;
+  // }
+
+  .heading {
+    margin-top: 160px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 140px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 100px;
+    }
+  }
+
+  .hero-img {
+    position: absolute;
+    inset-inline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    bottom: -180px;
+
+    @include media-breakpoint-down(md) {
+      bottom: -150px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      bottom: -120px;
+    }
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    width: 10%;
+    
+    img {
+      animation: bounce 2s infinite;
+    }
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+  }
+}
+
+@keyframes gradientAnimate {
+  0% {
+    background-position: 0% 41%
+  }
+
+  50% {
+    background-position: 100% 60%
+  }
+
+  100% {
+    background-position: 0% 41%
+  }
+}

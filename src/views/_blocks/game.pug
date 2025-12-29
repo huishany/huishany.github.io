@@ -1,0 +1,27 @@
+.games-section#work
+  .scrolling-ribbon(data-scrolling-ribbon)
+    .ribbon-content
+      span GAMES
+
+  .container-fluid
+    .row.justify-content-center
+      .col-md-8.col-xl-6
+        .game-console(data-console)
+          img.console-base.img-fluid(src="/src/assets/images/spirit-ward-console.png" alt="Game Console")
+
+          .console-screen
+            .screen-content
+              .description
+              div.roles-list
+
+          button.btn-dpad.left(data-dir="left")
+          button.btn-dpad.right(data-dir="right")
+
+          a.btn-action.a-btn(href="" target="_blank" rel="noopener")
+          a.btn-action.b-btn(href="" target="_blank" rel="noopener")
+
+          .indicator-left
+            img.img-fluid(src="/src/assets/images/curly-arrow-2.png" alt="Curly Arrow 2")
+
+          .indicator-right
+            img.img-fluid(src="/src/assets/images/curly-arrow-3.png" alt="Curly Arrow 3")

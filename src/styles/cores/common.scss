@@ -1,0 +1,32 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  //padding-inline: 3%;
+  max-width: 1400px;
+  height: 100%;
+}
+
+.heading {
+  font-family: 'AemstelRegular', sans-serif;
+  line-height: 1;
+
+  &.heading-60 {
+    font-size: clamp(30px, 4.2vw, 60px);
+  }
+
+  &.heading-40 {
+    font-size: clamp(20px, 2.8vw, 40px);
+  }
+}
+
+.text {
+  &.text-20 {
+    font-size: clamp(14px, 1.4vw, 20px);
+  }
+
+  &.text-18 {
+    font-size: clamp(12px, 1.2vw, 18px);
+  }
+}
