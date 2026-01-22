@@ -77,6 +77,10 @@
       width: 80%;
       margin-inline: auto;
     }
+
+    @include media-breakpoint-down(md) {
+      width: 96%;
+    }
     
     .content {
       padding: 30px;

@@ -10,6 +10,11 @@
   @include media-breakpoint-down(md) {
     padding: 50px 0 0;
   }
+
+  @include media-breakpoint-down(md) {
+    min-height: unset;
+    padding: 0;
+  }
   
   .cloud-link {
     position: relative;
@@ -18,6 +23,12 @@
     height: 77px;
     align-items: center;
     justify-content: center;
+
+    @include media-breakpoint-down(sm) {
+      min-height: unset;
+      padding: 0;
+      width: 80px;
+    }
   
     svg {
       pointer-events: none;
@@ -39,12 +50,25 @@
       color: #fff;
       pointer-events: none;
       bottom: 15px;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 1.3rem;
+        bottom: 21px;
+      }
     }
   }
 
   .footer-bottom {
     position: relative;
     height: 320px;
+
+    @include media-breakpoint-down(md) {
+      height: 200px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      height: 150px;
+    }
 
     .character {
       position: absolute;
@@ -94,10 +118,14 @@
       bottom: 6%;
       transform: translateX(-50%);
       z-index: 4;
-      font-size: 0.85rem;
+      font-size: clamp(10px, 1.4vw ,14px);
       color: #000;
       opacity: 0.6;
       pointer-events: none;
+
+      @include media-breakpoint-down(md) {
+        bottom: 1%;
+      }
     }
   }
 }
