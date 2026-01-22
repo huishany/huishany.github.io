@@ -1,6 +1,64 @@
 gsap.registerPlugin(ScrollTrigger);
 
 $(function () {
+
+  // const $container = $('#iconField');
+
+  // const icons = [
+  //   'coke.png',
+  //   'coffee.png',
+  //   'pancake.png',
+  //   'toast.png'
+  // ];
+
+  // const angleDeg = -45;
+  // const angleRad = angleDeg * Math.PI / 180;
+
+  // const speed = 100; // px per second
+  // const iconSpacing = 200; // spacing between icons along diagonal
+  // const rowSpacing = 220; // vertical spacing between diagonal rows
+
+  // // Calculate number of rows and columns to fill screen
+  // const cols = Math.ceil($(window).width() / iconSpacing) + 2; // +2 to cover overflow
+  // const rows = Math.ceil($(window).height() / rowSpacing) + 2;
+
+  // for (let row = 0; row < rows; row++) {
+  //   for (let col = 0; col < cols; col++) {
+  //     const $icon = $('<img>', {
+  //       src: `/images/icons/${icons[Math.floor(Math.random() * icons.length)]}`,
+  //       class: 'floating-icon'
+  //     });
+
+  //     // Diagonal positioning: shift each row diagonally
+  //     const startX = col * iconSpacing - row * iconSpacing - 200; // start offscreen left
+  //     const startY = $(window).height() - row * rowSpacing + 200; // start offscreen bottom
+
+  //     $icon.css({
+  //       left: startX + 'px',
+  //       top: startY + 'px',
+  //       position: 'absolute'
+  //     });
+
+  //     $container.append($icon);
+
+  //     // Distance to travel (diagonal offscreen)
+  //     const distance = $(window).height() + $(window).width();
+  //     const dx = Math.cos(angleRad) * distance;
+  //     const dy = Math.sin(angleRad) * distance;
+  //     const duration = distance / speed;
+
+  //     gsap.to($icon, {
+  //       x: dx,
+  //       y: dy,
+  //       duration: duration,
+  //       ease: 'none',
+  //       onComplete: function () {
+  //         $icon.remove(); // cleanup
+  //       }
+  //     });
+  //   }
+  // }
+
   //------------- SCROLLING RIBBON ------------//
 
   $('[data-scrolling-ribbon]').each(function () {
@@ -159,7 +217,7 @@ $(function () {
           scrollTrigger: {
             trigger: card,
             start: 'top 20%',
-            end: 'top 80%',
+            end: 'top 90%',
             scrub: 0.6
           }
         }
