@@ -48,7 +48,7 @@ $(function () {
   const states = [
     {
       image: '/images/spirit-ward-console.png',
-      description: 'A 3D third person shooter, base defense, mystical action/strategy game where you play as an exorcist defending the village from waves of malevolent spirits.',
+      description: 'A 3D third person shooter, base defense game built using a custom C++ game engine where you play as an exorcist defending the village from waves of malevolent spirits.',
       roles: [
         'Physics System (Game Engine)',
         'Gameplay Programming',
@@ -59,7 +59,7 @@ $(function () {
     },
     {
       image: '/images/oceania-cove-console.png',
-      description: 'A 2D underwater farming simulation game where you play as a farmer who got cursed into a mermaid and the only way back is to restore the village.',
+      description: 'A 2D underwater farming simulation game built using a custom C++ game engine where you play as a farmer who got cursed into a mermaid and the only way back is to restore the village.',
       roles: [
         'Physics System (Game Engine)',
         'Gameplay Programming',
@@ -70,7 +70,7 @@ $(function () {
     },
     {
       image: '/images/ufo-console.png',
-      description: 'A 2D pixelated, space-themed multiplayer arcade style game where you solve puzzles, race through obstacles, and shoot alien mobs!',
+      description: 'A 2D pixelated, space-themed multiplayer arcade style game built using AlphaEngine where you solve puzzles, race through obstacles, and shoot alien mobs!',
       roles: [
         'Physics System (Game Engine)',
         'Gameplay Programming',
@@ -158,8 +158,8 @@ $(function () {
           delay: index * 0.1,
           scrollTrigger: {
             trigger: card,
-            start: 'top 30%',
-            end: 'top 40%',
+            start: 'top 20%',
+            end: 'top 80%',
             scrub: 0.6
           }
         }
