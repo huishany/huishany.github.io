@@ -106,36 +106,27 @@ $(function () {
   const states = [
     {
       image: '/images/spirit-ward-console.png',
-      description: 'A 3D third person shooter, base defense game built using a custom C++ game engine where you play as an exorcist defending the village from waves of malevolent spirits.',
-      roles: [
-        'Physics System (Game Engine)',
-        'Gameplay Programming',
-        'Game and Level Design'
-      ],
+      description: 'A 3D third person shooter, base defense game where you play as an exorcist defending the village from waves of malevolent spirits.',
       linkA: '',
       linkB: 'https://youtu.be/j0O26mtvuSg?si=3FLmM8-1SzUlELth'
     },
     {
       image: '/images/oceania-cove-console.png',
-      description: 'A 2D underwater farming simulation game built using a custom C++ game engine where you play as a farmer who got cursed into a mermaid and the only way back is to restore the village.',
-      roles: [
-        'Physics System (Game Engine)',
-        'Gameplay Programming',
-        'Game and Level Design'
-      ],
+      description: 'A 2D underwater farming simulation game where you play as a farmer who got cursed into a mermaid and the only way back is to restore the village.',
       linkA: 'https://youtu.be/IydYx104NZE',
       linkB: 'https://youtu.be/iLDsiJ5qqEc'
     },
     {
       image: '/images/ufo-console.png',
-      description: 'A 2D pixelated, space-themed multiplayer arcade style game built using AlphaEngine where you solve puzzles, race through obstacles, and shoot alien mobs!',
-      roles: [
-        'Physics System (Game Engine)',
-        'Gameplay Programming',
-        'Game and Level Design'
-      ],
+      description: 'A 2D pixelated, space-themed multiplayer arcade style game where you solve puzzles, race through obstacles, and shoot alien mobs!',
       linkA: 'https://youtu.be/NkHQmg0uh3A',
       linkB: 'https://youtu.be/KECUlB1n-dI'
+    },
+    {
+      image: '/images/bullet-dream-console.png',
+      description: 'A 2D Touhou-inspired bullet hell game where you navigate through a dream, dodge bullets and monsters, pass through a maze, and solve puzzles.',
+      linkA: '',
+      linkB: 'https://youtu.be/cNtIHYduhg8'
     }
   ];
 
@@ -157,11 +148,11 @@ $(function () {
       $description.text(state.description);
 
       if (!state.linkA) {
-        $aBtn.addClass('disabled');
+        $aBtn.hide();
         $aBtn.attr('href', '#');
         $aBtn.off('click').on('click', e => e.preventDefault());
       } else {
-        $aBtn.removeClass('disabled');
+        $aBtn.show();
         $aBtn.attr('href', state.linkA);
         $aBtn.off('click');
       }
