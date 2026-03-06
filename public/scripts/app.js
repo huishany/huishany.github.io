@@ -156,16 +156,6 @@ $(function () {
       $img.attr('src', state.image);
       $description.text(state.description);
 
-      // // Render bullet list
-      // const $rolesList = $console.find('.roles-list');
-      // $rolesList.empty(); // Clear previous content
-      // $rolesList.append('<strong>Roles & Responsibilities:</strong>');
-      // const $ul = $('<ul>');
-      // state.roles.forEach(role => {
-      //   $ul.append(`<li>${role}</li>`);
-      // });
-      // $rolesList.append($ul);
-
       if (!state.linkA) {
         $aBtn.addClass('disabled');
         $aBtn.attr('href', '#');
@@ -216,9 +206,9 @@ $(function () {
           delay: index * 0.1,
           scrollTrigger: {
             trigger: card,
-            start: 'top 20%',
+            start: 'top 30%',
             end: 'top 90%',
-            scrub: 0.6
+            scrub: 0.8
           }
         }
       );

@@ -29,11 +29,61 @@
     z-index: 2;
     position: relative;
     margin-bottom: -28rem;
-    pointer-events: none;
 
-    .content,
-    .view-btn {
-      pointer-events: auto;
+    .image-link {
+      position: relative;
+      display: block;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   inset: 0;
+
+      //   background: linear-gradient(
+      //     to top,
+      //     rgba(0, 0, 0, 0.4) 0%,
+      //     rgba(255, 255, 255, 0) 30%
+      //   );
+
+      //   pointer-events: none;
+      // }
+
+      .overlay {
+        position: absolute;
+        inset: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: rgba(0,0,0,0.5);
+        color: white;
+        font-size: 20px;
+        font-weight: 400;
+        text-decoration: underline;
+
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+    }
+
+    .image-link:hover .overlay {
+      opacity: 1;
+    }
+
+    .image-link img {
+      transition: transform 0.35s ease;
+    }
+
+    .image-link:hover img {
+      transform: scale(1.05);
     }
 
     img {
@@ -66,10 +116,15 @@
         z-index: 6;
         transform: translateX(-80px);
       }
+
+      &:nth-child(6) {
+        z-index: 7;
+        transform: translateX(120px);
+      }
     }
     
     @include media-breakpoint-down(xl) {
-      margin-bottom: -25rem;
+      margin-bottom: -18rem;
     }
 
     @include media-breakpoint-down(lg) {
@@ -97,6 +152,12 @@
       border-radius: 999px;
       font-size: 0.875rem;
 
+      margin-left: auto;
+
+      @include media-breakpoint-down(lg) {
+        margin-left: 0;
+      }
+
       &:hover {
         background: #000;
         color: #fff;
@@ -111,6 +172,11 @@
     .tags {
       .badge {
         padding: 10px 25px;
+        font-size: clamp(10px, 2.4vw, 14px);
+
+        @include media-breakpoint-down(sm) {
+          padding: 10px 20px;
+        }
       }
     }
   }
