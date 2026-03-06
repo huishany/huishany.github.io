@@ -6,10 +6,10 @@
 
   @include media-breakpoint-down(lg) {
     padding: 80px 0;
+    min-height: unset;
   }
 
   @include media-breakpoint-down(md) {
-    min-height: unset;
     padding: 60px 0;
   }
 
@@ -36,18 +36,30 @@
       }
 
       @include media-breakpoint-down(sm) {
-        padding: 2% 5%;
+        padding: 2.5% 3%;
       }
 
       .screen-content {
         opacity: 0;
         transform: translateY(20px);
         transition: opacity 0.3s ease;
-        font-size: clamp(8px, 2.4vw, 18px);
         line-height: 1;
+
+        
+
+        @include media-breakpoint-up(lg) {
+          font-size: 18px;
+        }
 
         @include media-breakpoint-down(sm) {
           line-height: 0.8;
+          font-size: clamp(10px, 2.78vw , 16px);
+          display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        -webkit-line-clamp: 4; // number of lines allowed
         }
       }
     }
